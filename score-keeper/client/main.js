@@ -1,4 +1,8 @@
-import someDefault from './../imports/utils.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Meteor} from 'meteor/meteor';
 
-console.log('Log from /client/main.js');
-console.log(someDefault);
+Meteor.startup(function () {
+  const jsx = <p>This is from main.js</p>;
+  ReactDOM.render(jsx, document.getElementById('app'));
+});
