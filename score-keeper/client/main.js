@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Players} from './../imports/api/players';
+import TitleBar from '../imports/ui/TitleBar';
+import AddPlayer from '../imports/ui/AddPlayer';
 
 
 
@@ -19,31 +21,17 @@ const renderPlayers  = playersList => {
   });
 }
 
-const handleSubmit = (e) => {
-  const newPlayer = e.target.playerName.value;
-  e.preventDefault();
-
-  if(newPlayer) {
-    e.target.playerName.value = '';
-    Players.insert({
-      name: newPlayer,
-      score: 0
-    });
-  }
-};
 
 Meteor.startup( () => {
   Tracker.autorun(() => {
     const players = Players.find().fetch();
     const title = "Score Keeper";
+    const subtitle = "Created by Lidiia Gallagher"
     const jsx = (
                 <div>
-                  <h2>{title}</h2>
+                  <TitleBar title={title} subtitle={subtitle}/>
                   {renderPlayers(players)}
-                  <form onSubmit={handleSubmit}>
-                    <input type="text" name="playerName" placeholder="Enter player name..."/>
-                    <button>Add Player</button>
-                  </form>
+                  <AddPlayer />
                 </div>
     );
     ReactDOM.render(jsx, document.getElementById('app'));
