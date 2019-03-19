@@ -11,6 +11,7 @@ import PlayerList from '../imports/ui/PlayerList';
 Meteor.startup( () => {
   Tracker.autorun(() => {
     const players = Players.find().fetch();
+    console.log(players);
     const title = "Score Keeper";
     const subtitle = "Created by Lidiia Gallagher"
     const jsx = (

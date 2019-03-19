@@ -6,6 +6,7 @@ class Player extends React.Component {
 
   render() {
     const player = this.props.player;
+    console.log(player);
     return (
       <p key={player._id}>
         {player.name} has {player.score} point(s).
