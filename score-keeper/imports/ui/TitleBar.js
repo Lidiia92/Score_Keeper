@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class TitleBar extends React.Component{
+
+    renderSubtitle() {
+      if(this.props.subtitle) {
+        return <p><em>{this.props.subtitle}</em></p>
+      } 
+    }
+
     render() {
     
       return (
         <div>
           <h1>{this.props.title}</h1>
-          <p><em>{this.props.subtitle}</em></p>
+          {this.renderSubtitle()}
         </div>
       );
     }
@@ -15,7 +22,7 @@ class TitleBar extends React.Component{
 
 TitleBar.propTypes = {
     title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired
+    subtitle: PropTypes.string
 }
 
 
