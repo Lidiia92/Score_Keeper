@@ -2,3 +2,9 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+$red: red;
+
+* {
+  color: $red;
+}
