@@ -8,12 +8,12 @@ class Player extends React.Component {
     const player = this.props.player;
     console.log(player);
     return (
-      <p key={player._id}>
-        {player.name} has {player.score} point(s).
+      <div key={player._id} className="item">
+        <p>{player.name} has {player.score} point(s).</p>
         <button onClick={() => Players.update({_id: player._id}, {$inc: {score: 1}})}>+1</button>
         <button onClick={() => Players.update({_id: player._id}, {$inc: {score: -1}})}>-1</button>
         <button onClick={() => Players.remove({_id: player._id})}>X</button>
-      </p>
+      </div>
     );  
   }
 
