@@ -10,7 +10,7 @@ class PlayerList extends Component {
             return <Player key={player._id} player={player}/>;
         });
     } else {
-        return <div className="item"><p>Add your first player to get started.</p></div>
+        return <div className="item"><p className="item__message">Add your first player to get started.</p></div>
     }
   }
   

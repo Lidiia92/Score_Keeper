@@ -10,9 +10,9 @@ class Player extends React.Component {
     return (
       <div key={player._id} className="item">
         <p>{player.name} has {player.score} point(s).</p>
-        <button onClick={() => Players.update({_id: player._id}, {$inc: {score: 1}})}>+1</button>
-        <button onClick={() => Players.update({_id: player._id}, {$inc: {score: -1}})}>-1</button>
-        <button onClick={() => Players.remove({_id: player._id})}>X</button>
+        <button className="button button--round" onClick={() => Players.update({_id: player._id}, {$inc: {score: 1}})}>+1</button>
+        <button className="button button--round" onClick={() => Players.update({_id: player._id}, {$inc: {score: -1}})}>-1</button>
+        <button className="button button--round" onClick={() => Players.remove({_id: player._id})}>X</button>
       </div>
     );  
   }
