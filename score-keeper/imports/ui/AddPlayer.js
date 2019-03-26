@@ -20,8 +20,8 @@ class AddPlayer extends React.Component{
     render() {
       return (
         <div className="item">
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" name="playerName" placeholder="Enter player name..."/>
+            <form className="form" onSubmit={this.handleSubmit}>
+                <input className="form__input" type="text" name="playerName" placeholder="Enter player name..."/>
                 <button className="button">Add Player</button>
             </form>
         </div>

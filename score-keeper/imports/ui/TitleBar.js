@@ -5,7 +5,7 @@ class TitleBar extends React.Component{
 
     renderSubtitle() {
       if(this.props.subtitle) {
-        return <p><em>{this.props.subtitle}</em></p>
+        return <p className="title-bar__subtitle"><em>{this.props.subtitle}</em></p>
       } 
     }
 
