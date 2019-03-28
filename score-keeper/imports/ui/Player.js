@@ -13,6 +13,8 @@ class Player extends React.Component {
 			<div>
 				<h3 className="player__name">{player.name}</h3>
 				<p className="player__stats">{player.score} point(s).</p>
+				Rank: {player.rank}
+				Position: {player.position}
 			</div>
 			<div className="player__actions">
 				<button className="button button--round" onClick={() => Players.update({_id: player._id}, {$inc: {score: 1}})}>+1</button>
