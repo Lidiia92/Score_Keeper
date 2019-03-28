@@ -11,3 +11,39 @@
     font-weight: 300;
     text-align: center;
 }
+
+.item h3 {
+    margin-top: 6px;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.item--position-1 {
+    background: $mainGreen;
+    border: 1px solid $mainGreen-d;
+}
+
+.item--position-1 svg {
+    color: #FFD700;
+    font-size: 2.2rem;
+}
+
+.item--position-2 {
+    background: $mainBlue;
+    border: 1px solid $mainBlue-d;
+}
+
+.item--position-2 svg {
+    color: #C0C0C0;
+    font-size: 2.2rem;
+}
+
+.item--position-3 {
+    background: $mainRed;
+    border: 1px solid $mainRed-d;
+}
+
+.item--position-3 svg {
+    color: #cd7f32 ;
+    font-size: 2.2rem;
+}

@@ -1,5 +1,5 @@
 .button {
-    background: white;
+    background: transparent;
     border: 1px solid #555555;
     color: #555555;
     cursor: pointer;
@@ -8,9 +8,9 @@
     margin-left: 1.3rem;
     outline: none;
     padding: 1.3rem;
-    transition: background .2s ease, transform .2 ease;
+    transition: all .2s ease;
 
-    &:hover, &:focus {
+    &:hover {
         background: #e8e8e8;
     }
 
@@ -25,3 +25,26 @@
     height: 4rem;
     width: 4rem;
 }
+
+.button--position-1 {
+
+    &:hover, &:active {
+        background: $mainGreen-d
+    }
+}
+
+.button--position-2 {
+
+    &:hover, &:active {
+        background: $mainBlue-d
+    }
+}
+
+
+.button--position-3 {
+
+    &:hover, &:active {
+        background: $mainRed-d
+    }
+}
+

@@ -1,3 +1,20 @@
+//variables
+
+$willowBrook: #e4ede0;
+$willowBrook-d: darken($willowBrook, 15%);
+$mystic: #dfe7ed;
+$mystic-d: darken($mystic, 15%);
+$softPeach: #eddfdf;
+$softPeach-d: darken($softPeach, 15%);
+
+$mainGreen: $willowBrook;
+$mainGreen-d: $willowBrook-d;
+$mainBlue: $mystic;
+$mainBlue-d: $mystic-d;
+$mainRed: $softPeach;
+$mainRed-d: $softPeach-d;
+
+
 * {
     margin: 0;
     padding: 0
